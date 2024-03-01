@@ -1,0 +1,620 @@
+{
+  "_id": "65e18b5f0ed6160142625005",
+  "workflow": {
+    "source": {
+      "name": "",
+      "service": "github",
+      "accountId": "6512b58325945d0016d008d5",
+      "workspace": "",
+      "workspaceName": "",
+      "repository": "test-repo",
+      "repoId": "hemanthreddy-45/test-repo",
+      "projectId": "hemanthreddy-45/test-repo",
+      "gitUrl": "https://github.com/hemanthreddy-45/test-repo",
+      "sshUrl": "git@github.com:hemanthreddy-45/test-repo.git",
+      "branch": "main",
+      "secondary_branches": [],
+      "key": "",
+      "trigger_active": true,
+      "isPushEvent": true,
+      "isPrEvent": true,
+      "isMonitored": false,
+      "prCreatedEvent": true,
+      "prApprovedEvent": false,
+      "gitExportEnabled": true,
+      "gitExportPath": "Revision",
+      "dynamicSettings": false,
+      "allowDynamicSettingsInUi": false,
+      "enableBranchSwitch": false
+    },
+    "schedule": {
+      "start_date": null,
+      "end_date": null,
+      "frequency": ""
+    },
+    "plan": [
+      {
+        "trigger": [],
+        "type": [
+          "script"
+        ],
+        "notification": [
+          {
+            "type": "email",
+            "addresses": [
+              "swapnali.pise@opsera.io"
+            ],
+            "event": "all",
+            "enabled": true,
+            "logEnabled": true
+          },
+          {
+            "type": "slack",
+            "channel": "",
+            "toolId": "",
+            "event": "finished",
+            "enabled": false,
+            "logEnabled": false
+          },
+          {
+            "type": "jira",
+            "event": "all",
+            "jiraBoard": "",
+            "jiraToolId": "",
+            "jiraProject": "",
+            "jiraPriority": "",
+            "jiraSprint": "",
+            "jiraParentTicket": "",
+            "jiraPrimaryAssignee": "",
+            "jiraSecondaryAssignees": [],
+            "jiraOpenStep": "",
+            "jiraClosureStep": "",
+            "enabled": false
+          },
+          {
+            "type": "teams",
+            "event": "all",
+            "toolId": "",
+            "enabled": false,
+            "logEnabled": false
+          },
+          {
+            "type": "servicenow",
+            "event": "all",
+            "toolId": "",
+            "serviceNowUserId": "",
+            "serviceNowGroupId": "",
+            "enabled": false
+          },
+          {
+            "type": "gchat",
+            "event": "all",
+            "toolId": "",
+            "enabled": false,
+            "logEnabled": false
+          }
+        ],
+        "_id": "642147d9cbacfa00465a127f",
+        "name": "command line",
+        "description": "",
+        "active": false,
+        "tags": [],
+        "updatedAt": "2023-03-27T07:38:01.988Z",
+        "orchestration_type": "standard",
+        "tool": {
+          "tool_identifier": "command-line",
+          "configuration": {
+            "type": "github",
+            "jobType": "SHELL SCRIPT",
+            "toolConfigId": "60db4eac842fdc5213767cdc",
+            "toolName": "Jenkins-Prod-Srini",
+            "jobName": "SHELL_SCRIPT_V2_64213e587456bc0039a10d61_642147d9cbacfa00465a127f",
+            "toolJobId": "632d43a727a149002d2faeb7",
+            "projectId": "",
+            "buildType": "others",
+            "gitToolId": "6385af7bd4c88b0039fcad0c",
+            "repoId": "swapnaliOpsera/testNotifiactionPRGitCustodian",
+            "gitUrl": "https://github.com/swapnaliOpsera/testNotifiactionPRGitCustodian",
+            "sshUrl": "git@github.com:swapnaliOpsera/testNotifiactionPRGitCustodian.git",
+            "service": "github",
+            "gitCredential": "Github swapnali",
+            "workspace": "",
+            "workspaceName": "",
+            "repository": "testNotifiactionPRGitCustodian",
+            "gitBranch": "main",
+            "agentLabels": "generic-windows",
+            "autoScaleEnable": true,
+            "outputPath": "",
+            "outputFileName": "",
+            "dependencyType": "",
+            "workspaceDeleteFlag": false,
+            "sourceScript": false,
+            "inputPath": "",
+            "inputFileName": "",
+            "commands": "",
+            "terraformStepId": "",
+            "customParameters": [],
+            "outputCustomParameters": [],
+            "stepParameters": [],
+            "useTerraformOutput": false,
+            "sonarScanFlag": false,
+            "saveSonarParameters": false,
+            "sonarCustomParameters": [],
+            "sonarToolConfigId": "",
+            "projectKey": "",
+            "saveEnvironmentVariables": false,
+            "environmentVariables": [],
+            "toolJobName": "shellscriptWinAgent",
+            "gitCommitId": "8bc202dbcfb94418e22dfeaa564b82e4b4b27c15"
+          },
+          "threshold": {
+            "type": "",
+            "value": ""
+          },
+          "job_type": "shell script"
+        }
+      },
+      {
+        "trigger": [],
+        "type": [
+          "code-scan"
+        ],
+        "notification": [
+          {
+            "type": "email",
+            "addresses": [
+              "swapnali.pise@opsera.io"
+            ],
+            "event": "all",
+            "enabled": true,
+            "logEnabled": true
+          },
+          {
+            "type": "slack",
+            "channel": "",
+            "toolId": "",
+            "event": "finished",
+            "enabled": false,
+            "logEnabled": false
+          },
+          {
+            "type": "jira",
+            "event": "all",
+            "jiraBoard": "",
+            "jiraToolId": "",
+            "jiraProject": "",
+            "jiraPriority": "",
+            "jiraSprint": "",
+            "jiraParentTicket": "",
+            "jiraPrimaryAssignee": "",
+            "jiraSecondaryAssignees": [],
+            "jiraOpenStep": "",
+            "jiraClosureStep": "",
+            "enabled": false
+          },
+          {
+            "type": "teams",
+            "event": "all",
+            "toolId": "",
+            "enabled": false,
+            "logEnabled": false
+          },
+          {
+            "type": "servicenow",
+            "event": "all",
+            "toolId": "",
+            "serviceNowUserId": "",
+            "serviceNowGroupId": "",
+            "enabled": false
+          },
+          {
+            "type": "gchat",
+            "event": "all",
+            "toolId": "",
+            "enabled": false,
+            "logEnabled": false
+          }
+        ],
+        "_id": "642161dd585fd1005379b635",
+        "name": "Sonar",
+        "description": "",
+        "active": false,
+        "tags": [],
+        "updatedAt": "2023-03-27T09:29:01.274Z",
+        "orchestration_type": "standard",
+        "tool": {
+          "tool_identifier": "sonar",
+          "configuration": {
+            "jobType": "CODE SCAN",
+            "toolConfigId": "60db4eac842fdc5213767cdc",
+            "jenkinsUrl": "https://jenkins-nekisj04.prodqa.opsera.io/",
+            "jenkinsPort": "",
+            "jUserId": "admin",
+            "jAuthToken": "",
+            "jobName": "CODE SCAN_64213e587456bc0039a10d61_642161dd585fd1005379b635",
+            "toolJobId": "6123c9b4b160569b14a0c9ac",
+            "toolJobType": [
+              "CODE SCAN"
+            ],
+            "projectKey": "mvn_junit123",
+            "projectName": "",
+            "accountUsername": "",
+            "projectId": "swapnaliOpsera/testNotifiactionPRGitCustodian",
+            "defaultBranch": "main",
+            "dockerName": "",
+            "dockerTagName": "",
+            "buildType": "gradle",
+            "gitToolId": "6385af7bd4c88b0039fcad0c",
+            "repoId": "swapnaliOpsera/testNotifiactionPRGitCustodian",
+            "gitUrl": "https://github.com/swapnaliOpsera/testNotifiactionPRGitCustodian",
+            "sshUrl": "git@github.com:swapnaliOpsera/testNotifiactionPRGitCustodian.git",
+            "service": "github",
+            "gitCredential": "github swapnali",
+            "gitUserName": "swapnaliOpsera",
+            "repository": "testNotifiactionPRGitCustodian",
+            "branch": "main",
+            "sonarSourcePath": "",
+            "workspace": "",
+            "workspaceName": "",
+            "sonarToolConfigId": "62516e2d2a1f7a002c264be1",
+            "workspaceDeleteFlag": false,
+            "jobDescription": "",
+            "job_type": "opsera-job",
+            "gitBranch": "main",
+            "successThreshold": "",
+            "isScanArtifact": false,
+            "stepIdXml": "",
+            "commands": "mvn install",
+            "clientSideThreshold": true,
+            "thresholdCompliance": [
+              {
+                "level": "duplicated_lines_density",
+                "count": 3
+              },
+              {
+                "level": "new_coverage",
+                "count": 10
+              },
+              {
+                "level": "security_hotspots_reviewed",
+                "count": 12
+              }
+            ],
+            "thresholdRating": [
+              {
+                "level": "security_rating",
+                "grade": "E"
+              },
+              {
+                "level": "sqale_rating",
+                "grade": "B"
+              },
+              {
+                "level": "reliability_rating",
+                "grade": "C"
+              }
+            ],
+            "saveSonarParameters": false,
+            "sonarCustomParameters": [],
+            "agentLabels": "generic-linux",
+            "buildToolVersion": "6.3",
+            "sonarUrl": "https://sqprod.opsera.io",
+            "sonarPort": "",
+            "sonarUserId": "admin"
+          },
+          "threshold": {
+            "type": "",
+            "value": ""
+          },
+          "job_type": "opsera-job"
+        }
+      },
+      {
+        "trigger": [],
+        "type": [
+          "interaction-gate"
+        ],
+        "notification": [
+          {
+            "type": "email",
+            "addresses": [
+              "swapnali.pise@opsera.io"
+            ],
+            "event": "all",
+            "enabled": true,
+            "logEnabled": true
+          },
+          {
+            "type": "slack",
+            "channel": "",
+            "toolId": "",
+            "event": "finished",
+            "enabled": false,
+            "logEnabled": false
+          },
+          {
+            "type": "jira",
+            "jiraBoard": "",
+            "event": "all",
+            "jiraToolId": "",
+            "jiraProject": "",
+            "jiraPriority": "",
+            "jiraSprint": "",
+            "jiraParentTicket": "",
+            "jiraPrimaryAssignee": "",
+            "jiraSecondaryAssignees": [],
+            "enabled": false
+          },
+          {
+            "type": "teams",
+            "event": "all",
+            "toolId": "",
+            "enabled": false,
+            "logEnabled": false
+          },
+          {
+            "type": "servicenow",
+            "event": "all",
+            "toolId": "",
+            "serviceNowUserId": "",
+            "serviceNowGroupId": "",
+            "enabled": false
+          },
+          {
+            "type": "gchat",
+            "event": "all",
+            "toolId": "",
+            "enabled": false,
+            "logEnabled": false
+          }
+        ],
+        "_id": "64214537bac5f4003aa9014d",
+        "name": "Approval Gate",
+        "description": "",
+        "active": false,
+        "tags": [
+          {
+            "type": "pipeline",
+            "value": "approval-gate_64214537bac5f4003aa9014d"
+          }
+        ],
+        "updatedAt": "2023-03-27T07:26:47.347Z",
+        "orchestration_type": "standard",
+        "tool": {
+          "tool_identifier": "approval",
+          "configuration": {
+            "sendCustomMessage": true,
+            "message": "please approve",
+            "contact": "swapnali.pise@opsera.io"
+          },
+          "threshold": {
+            "type": "user-approval",
+            "value": {
+              "user": "5f75953446564c10379902bb",
+              "email": "qaprod@protonmail.com",
+              "approved": true,
+              "approved_on": "2023-03-28T04:58:53.610Z",
+              "message": "This pipeline has been approved during an approval gate."
+            }
+          }
+        }
+      },
+      {
+        "trigger": [],
+        "type": [
+          "code-scan"
+        ],
+        "notification": [
+          {
+            "type": "email",
+            "addresses": [],
+            "event": "all",
+            "enabled": false,
+            "logEnabled": true
+          },
+          {
+            "type": "slack",
+            "channel": "",
+            "toolId": "",
+            "event": "finished",
+            "enabled": false,
+            "logEnabled": false
+          },
+          {
+            "type": "jira",
+            "event": "all",
+            "jiraBoard": "",
+            "jiraToolId": "",
+            "jiraProject": "",
+            "jiraPriority": "",
+            "jiraSprint": "",
+            "jiraParentTicket": "",
+            "jiraPrimaryAssignee": "",
+            "jiraSecondaryAssignees": [],
+            "jiraOpenStep": "",
+            "jiraClosureStep": "",
+            "enabled": false
+          },
+          {
+            "type": "teams",
+            "event": "all",
+            "toolId": "",
+            "enabled": false,
+            "logEnabled": false
+          },
+          {
+            "type": "servicenow",
+            "event": "all",
+            "toolId": "",
+            "serviceNowUserId": "",
+            "serviceNowGroupId": "",
+            "enabled": false
+          },
+          {
+            "type": "gchat",
+            "event": "all",
+            "toolId": "",
+            "enabled": false,
+            "logEnabled": false
+          }
+        ],
+        "_id": "5ec7c8cedc73d971e2860b68",
+        "name": "Git custodian",
+        "description": "",
+        "active": true,
+        "updatedAt": "2020-05-22T12:42:54.717Z",
+        "tags": [
+          {
+            "type": "pipeline",
+            "value": "gitcustswapnali"
+          },
+          {
+            "type": "pipeline",
+            "value": "gitcustodiannokia2"
+          },
+          {
+            "type": "pipeline",
+            "value": "gitcustodianswapnalinokia"
+          }
+        ],
+        "orchestration_type": "standard",
+        "tool": {
+          "tool_identifier": "gitscraper",
+          "configuration": {
+            "gitFilePath": "",
+            "repository": "testNotifiactionPRGitCustodian",
+            "gitBranch": "main",
+            "gitToolId": "6385af7bd4c88b0039fcad0c",
+            "repoId": "swapnaliOpsera/testNotifiactionPRGitCustodian",
+            "sshUrl": "git@github.com:swapnaliOpsera/testNotifiactionPRGitCustodian.git",
+            "gitUrl": "https://github.com/swapnaliOpsera/testNotifiactionPRGitCustodian",
+            "bitbucketWorkspace": "",
+            "bitbucketWorkspaceName": "",
+            "type": "git_custodian",
+            "commits": "",
+            "threshold": 5,
+            "excludeSecrets": [],
+            "excludeFiles": [
+              "https://github.com/swapnaliOpsera/testNotifiactionPRGitCustodian/blob/main/file1",
+              "https://github.com/swapnaliOpsera/testNotifiactionPRGitCustodian/blob/24516c531564f50fa77befd003e00f935c9140f7/file1"
+            ],
+            "secretsException": false,
+            "filesException": true,
+            "service": "github",
+            "workspace": "",
+            "projectId": "swapnaliOpsera/testNotifiactionPRGitCustodian"
+          },
+          "threshold": {
+            "type": "",
+            "value": ""
+          },
+          "job": null
+        }
+      },
+      {
+        "trigger": [],
+        "type": [
+          "script"
+        ],
+        "notification": [],
+        "_id": "64bfb16eb34a38001263c0ea",
+        "name": "Dot net CLI",
+        "description": "",
+        "active": false,
+        "tags": [
+          {
+            "type": "pipeline",
+            "value": "dot-net-cli_64bfb16eb34a38001263c0ea"
+          }
+        ],
+        "updatedAt": "2023-07-25T11:26:38.414Z",
+        "orchestration_type": "standard",
+        "tool": {
+          "tool_identifier": "dotnet-cli",
+          "configuration": {
+            "type": "github",
+            "jobType": "BUILD",
+            "toolConfigId": "60db4eac842fdc5213767cdc",
+            "toolName": "Jenkins-Prod-Srini",
+            "jobName": "BUILD_64213e587456bc0039a10d61_64bfb16eb34a38001263c0ea",
+            "toolJobId": "62a3f367986a9f0163169dd2",
+            "projectId": "",
+            "buildType": "dotnet",
+            "buildTool": "dotnet",
+            "gitToolId": "6385af7bd4c88b0039fcad0c",
+            "repoId": "swapnaliOpsera/OracleFusion",
+            "gitUrl": "https://github.com/swapnaliOpsera/OracleFusion",
+            "sshUrl": "git@github.com:swapnaliOpsera/OracleFusion.git",
+            "service": "github",
+            "dockerName": "",
+            "dockerTagName": "",
+            "dockerPath": "",
+            "gitCredential": "github swapnali",
+            "workspace": "",
+            "repository": "OracleFusion",
+            "gitBranch": "main",
+            "agentLabels": "",
+            "workspaceName": "",
+            "workspaceDeleteFlag": false,
+            "outputPath": "",
+            "outputFileName": "Demo",
+            "commands": "",
+            "customParameters": [],
+            "dotnetType": "dotnet-framework",
+            "dotnetSdkVersion": "3.5",
+            "toolJobName": ".NETbuild",
+            "commandLineArgs": ""
+          },
+          "threshold": {
+            "type": "",
+            "value": ""
+          },
+          "job_type": "build"
+        }
+      }
+    ],
+    "run_count": 1,
+    "last_step": {
+      "status": "stopped",
+      "step_id": "5ec7c8cedc73d971e2860b68",
+      "check_count": 1,
+      "running": {},
+      "failed": {},
+      "success": {
+        "step_id": "5ec7c8cedc73d971e2860b68",
+        "activity_id": "65e18cae76334a0137cf87ff",
+        "status": "success",
+        "updatedAt": "2024-03-01T08:07:10.671Z"
+      }
+    },
+    "last_run": {
+      "completed": "2024-03-01T08:07:30.973Z",
+      "run_count": 1,
+      "status": "success"
+    }
+  },
+  "tags": [
+    {
+      "type": "pipeline",
+      "value": "gitcustodianswapnalinokia"
+    }
+  ],
+  "type": [],
+  "owner": "5f75953446564c10379902bb",
+  "roles": [],
+  "organizationName": "protonmail.com",
+  "account": "org109-acc",
+  "name": "PR and Git custodian notification_R",
+  "template": "5ec7c8cedc73d9532e860b67",
+  "templateIdentifier": "",
+  "description": "Create a new template from scratch.",
+  "project": {
+    "name": "",
+    "project_id": ""
+  },
+  "active": true,
+  "__v": 0,
+  "owner_name": "QA User-Production",
+  "createdAt": "2024-03-01T08:01:35.376Z",
+  "updatedAt": "2024-03-01T08:13:22.697Z"
+}
