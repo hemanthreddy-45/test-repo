@@ -1,0 +1,51 @@
+name: AZURE_DOCKER_PUSH_6388fa9be3e9dc0039b5c88d_62728f74bb14530018a7278d
+on:
+  workflow_dispatch:
+    inputs:
+      azure_registry_name:
+        required: false
+        description: Azure Registry Name
+      azure_repo_name:
+        required: false
+        description: Azure Repo Name
+      docker_image_name:
+        required: false
+        description: docker image name
+      docker_image_tag:
+        required: false
+        description: docker image tag
+      acr_docker_image_tag:
+        required: false
+        description: azure docker image tag
+      opsera_pipeline_id:
+        required: false
+        description: Opsera pipeline id
+      opsera_step_id:
+        required: false
+        description: Opsera step id
+      opsera_pipeline_run_count:
+        required: false
+        description: Opsera pipeline run count
+      file_name:
+        required: false
+        description: Opsera docker file name tar
+env:
+#   # This item has no matching transformer
+#   com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper:
+#   # TimestamperBuildWrapper was not converted because the behavior is available by default in GitHub Actions and/or it is not configurable
+jobs:
+  build:
+    runs-on:
+      - self-hosted
+      - generic-linux
+    steps:
+    - name: checkout
+      uses: actions/checkout@v4.1.0
+    - name: run command
+      shell: bash
+      run: |-
+        az login --service-principal --username $application_id --tenant $tenant_id  --password $application_password
+        az acr login --name $azure_registry_name
+        docker load --input /home/jenkins/agent/workspace/.docker-images/$file_name.tar
+        docker tag $docker_image_name:$docker_image_tag $azure_registry_name.azurecr.io/$azure_repo_name:$acr_docker_image_tag
+        docker push $azure_registry_name.azurecr.io/$azure_repo_name:$acr_docker_image_tag
